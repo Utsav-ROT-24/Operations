@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deploy
+spec:
+  replicas: 15
+  selector:
+    matchLabels:
+      app: utsav-backend
+  template:
+    metadata:
+      labels:
+        app: utsav-backend
+    spec:
+      containers:
+      - name: backend-utsav
+        image: registry.digitalocean.com/utsav-rot-24/backend
+        ports:
+        - containerPort: 8000
