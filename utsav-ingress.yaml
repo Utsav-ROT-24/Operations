@@ -10,6 +10,7 @@ spec:
   - hosts:
     - backend.bmsutsav.in
     - authportal.bmsutsav.in
+    - sponsorship.bmsutsav.in
     secretName: backend-kubernetes-tls
   rules:
   - host: "backend.bmsutsav.in"
@@ -30,5 +31,15 @@ spec:
         backend:
           service:
             name: auth-service
+            port:
+              number: 80
+  - host: "sponsorship.bmsutsav.in"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: sponsor-service
             port:
               number: 80

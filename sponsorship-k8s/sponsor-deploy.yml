@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sponsor-deploy
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: utsav-sponsor
+  template:
+    metadata:
+      labels:
+        app: utsav-sponsor
+    spec:
+      containers:
+      - name: utsav-sponsor
+        image: registry.digitalocean.com/utsav-rot-24/sponsorship:1.0.1
+        ports:
+        - containerPort: 4173
