@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: utsav-sponsor
-        image: registry.digitalocean.com/utsav-rot-24/sponsorship:1.0.3
+        image: registry.digitalocean.com/utsav-rot-24/sponsorship:1.0.8
         ports:
         - containerPort: 4173

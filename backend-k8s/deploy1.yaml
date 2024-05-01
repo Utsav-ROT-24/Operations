@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deploy1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: utsav-backend1
+  template:
+    metadata:
+      labels:
+        app: utsav-backend1
+    spec:
+      containers:
+      - name: backend-utsav
+        image: registry.digitalocean.com/utsav-rot-24/backend:1.0.1
+        ports:
+        - containerPort: 8000
+        volumeMounts:
+        - name: nfs-vol
+          mountPath: "/shared"
+      volumes:
+      - name: nfs-vol
+        nfs:
+          path: /mnt/volume_blr1_01/nfs
+          server: 143.110.180.168

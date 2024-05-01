@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: auth-deploy
+  name: coord-deploy
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: utsav-auth
+      app: utsav-coord
   template:
     metadata:
       labels:
-        app: utsav-auth
+        app: utsav-coord
     spec:
       containers:
-      - name: auth-utsav
-        image: registry.digitalocean.com/utsav-rot-24/auth-portal:1.0.3
+      - name: coord-utsav
+        image: registry.digitalocean.com/utsav-rot-24/coordinators:1.0.0
         ports:
         - containerPort: 4173
