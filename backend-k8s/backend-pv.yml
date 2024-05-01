@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nfs-backend-pv
+
+spec:
+  storageClassName: nfs
+  accessModes:
+    - ReadWriteMany
+  capacity:
+    storage: 40Gi
+
+  nfs:
+    path: /mnt/volume_blr1_01/nfs
+    server: 143.110.180.168

@@ -9,7 +9,7 @@ spec:
   tls:
   - hosts:
     - backend.bmsutsav.in
-    - authportal.bmsutsav.in
+    - auth.bmsutsav.in
     - sponsorship.bmsutsav.in
     - bmsutsav.in
     - coordinators.bmsutsav.in
@@ -25,14 +25,14 @@ spec:
             name: backend-service
             port:
               number: 80
-  - host: "authportal.bmsutsav.in"
+  - host: "auth.bmsutsav.in"
     http:
       paths:
       - pathType: Prefix
         path: "/"
         backend:
           service:
-            name: auth-service
+            name: authportal-service
             port:
               number: 80
   - host: "sponsorship.bmsutsav.in"
