@@ -13,6 +13,7 @@ spec:
     - sponsorship.bmsutsav.in
     - bmsutsav.in
     - coordinators.bmsutsav.in
+    - campaigners.bmsutsav.in
     secretName: backend-kubernetes-tls
   rules:
   - host: "backend.bmsutsav.in"
@@ -63,5 +64,15 @@ spec:
         backend:
           service:
             name: coord-service
+            port:
+              number: 80
+  - host: "campaigners.bmsutsav.in"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: camp-service
             port:
               number: 80

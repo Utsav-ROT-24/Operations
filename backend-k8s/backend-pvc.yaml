@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: nfs-pvc
+  name: nfs-backend-pvc
 
 spec:
   storageClassName: nfs
@@ -10,4 +10,4 @@ spec:
 
   resources:
     requests:
-      storage: 25Gi
+      storage: 80Gi

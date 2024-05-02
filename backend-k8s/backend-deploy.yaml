@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend-utsav
-        image: registry.digitalocean.com/utsav-rot-24/backend:1.0.5
+        image: registry.digitalocean.com/utsav-rot-24/backend:1.0.7
         ports:
         - containerPort: 8000
         volumeMounts:
@@ -23,4 +23,4 @@ spec:
       volumes:
       - name: nfs-vol
         persistentVolumeClaim:
-          claimName: nfs-pvc
+          claimName: nfs-backend-pvc

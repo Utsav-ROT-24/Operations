@@ -8,7 +8,7 @@ spec:
   accessModes:
     - ReadWriteMany
   capacity:
-    storage: 40Gi
+    storage: 90Gi
 
   nfs:
     path: /mnt/volume_blr1_01/nfs

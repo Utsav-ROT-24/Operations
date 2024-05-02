@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: coord-deploy
+  name: camp-deploy
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: utsav-coord
+      app: utsav-camp
   template:
     metadata:
       labels:
-        app: utsav-coord
+        app: utsav-camp
     spec:
       containers:
-      - name: coord-utsav
-        image: registry.digitalocean.com/utsav-rot-24/coordinators:1.0.2
+      - name: camp-utsav
+        image: registry.digitalocean.com/utsav-rot-24/campaining:1.0.2
         ports:
         - containerPort: 4173
