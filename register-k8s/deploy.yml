@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: register-deploy
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: utsav-register
+  template:
+    metadata:
+      labels:
+        app: utsav-register
+    spec:
+      containers:
+      - name: register-utsav
+        image: registry.digitalocean.com/utsav-rot-24/registration:1.0.0
+        ports:
+        - containerPort: 4173
