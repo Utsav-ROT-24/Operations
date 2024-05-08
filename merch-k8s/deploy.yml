@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: merch-deploy
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: utsav-merch
+  template:
+    metadata:
+      labels:
+        app: utsav-merch
+    spec:
+      containers:
+      - name: merch-utsav
+        image: registry.digitalocean.com/utsav-rot-24/merchandise:1.0.0
+        ports:
+        - containerPort: 4173
