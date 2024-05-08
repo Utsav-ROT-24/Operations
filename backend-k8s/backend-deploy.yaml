@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend-utsav
-        image: registry.digitalocean.com/utsav-rot-24/backend:1.2.3
+        image: registry.digitalocean.com/utsav-rot-24/backend:1.2.4
         ports:
         - containerPort: 8000
         volumeMounts:
