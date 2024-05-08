@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: merch-utsav
-        image: registry.digitalocean.com/utsav-rot-24/merchandise:1.0.0
+        image: registry.digitalocean.com/utsav-rot-24/merchandise:1.0.1
         ports:
         - containerPort: 4173
