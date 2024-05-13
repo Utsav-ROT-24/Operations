@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: register-utsav
-        image: registry.digitalocean.com/utsav-rot-24/registration:1.0.8
+        image: registry.digitalocean.com/utsav-rot-24/registration:1.0.9
         ports:
         - containerPort: 4173
